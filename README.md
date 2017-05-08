@@ -2,8 +2,6 @@
   <img src="doc/logo/logo.png"><br>
 </div>
 
----
-
 ### Project Description
 
 ---
