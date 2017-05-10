@@ -1,8 +1,0 @@
-setup.py
-KnowledgeNetworks/__init__.py
-KnowledgeNetworks/collaboration_count.py
-KnowledgeNetworks.egg-info/PKG-INFO
-KnowledgeNetworks.egg-info/SOURCES.txt
-KnowledgeNetworks.egg-info/dependency_links.txt
-KnowledgeNetworks.egg-info/requires.txt
-KnowledgeNetworks.egg-info/top_level.txt
