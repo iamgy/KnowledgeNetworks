@@ -52,9 +52,12 @@ def wrapping_function(data_source, year, country_list, column_name):
     count = np.zeros((len(country_list), len(country_list)))
     for i in filelist:
         filepath = op.join(path, i)
-        data = pd.read_csv(filepath, sep='\t', engine='python', usecols=['C1'], keep_default_na=False, index_col=False)
-        result = colla_count(data, country_list, column_name)
-        count += result
+        try:
+            data = pd.read_csv(filepath, sep='\t', engine='python', usecols=['C1'], keep_default_na=False, index_col=False)
+            result = colla_count(data, country_list, column_name)
+            count += result
+        except:
+            pass
     return count
 
 
