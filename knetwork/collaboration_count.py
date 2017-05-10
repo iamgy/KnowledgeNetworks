@@ -2,22 +2,24 @@ import pandas as pd
 import numpy as np
 import os
 import os.path as op
+import inspect
 
-def colla_count(data,country_list,column_name):
+
+def colla_count(data, country_list, column_name):
     """
     Function to count collaborations between 2 countries as well as number of
     papers from each country specified
     """
-    count={}
-    collaboration = np.zeros((len(country_list),len(country_list)))
+    count = {}
+    collaboration = np.zeros((len(country_list), len(country_list)))
     for i in country_list:
         count[i] = 0
-    for i in range(0,len(data)):
+    for i in range(0, len(data)):
         string1 = data[column_name][i]
-        a=[]
+        a = []
         for j in string1.split():
             for k in range(len(country_list)):
-                if j.lower() == country_list[k].lower() or j.lower() == (country_list[k].lower()+';'):
+                if j.lower() == country_list[k].lower() or j.lower() == (country_list[k].lower() + ';'):
                     if any(i == country_list[k] for i in a):
                         pass
                     else:
@@ -37,25 +39,28 @@ def colla_count(data,country_list,column_name):
 
     return collaboration
 
-def wrapping_function(year,country_list,column_name):
+
+def wrapping_function(data_source, year, country_list, column_name):
     """
     Wrapping function to count collaborations for a particular year
     """
-    path= os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+    path = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
     path = op.join(path, 'data')
-    path = op.join(path, '%d'%year)
+    path = op.join(path, data_source)
+    path = op.join(path, '%d' % year)
     filelist = os.listdir(path)
-    count = np.zeros((len(country_list),len(country_list)))
+    count = np.zeros((len(country_list), len(country_list)))
     for i in filelist:
-        filepath = op.join(path,i)
-        data=pd.read_csv(filepath,sep='\t',engine='python',usecols=['C1'],keep_default_na=False,index_col=False)
-        result = colla_count(data,country_list,column_name)
+        filepath = op.join(path, i)
+        data = pd.read_csv(filepath, sep='\t', engine='python', usecols=['C1'], keep_default_na=False, index_col=False)
+        result = colla_count(data, country_list, column_name)
         count += result
     return count
 
-def count_all_years(year_list,country_list,column_name):
-    results=[]
+
+def count_all_years(data_source, year_list, country_list, column_name):
+    results = []
     for i in year_list:
-        count = wrapping_function(i,country_list,column_name)
+        count = wrapping_function(data_source, i, country_list, column_name)
         results.append(count)
     return results
