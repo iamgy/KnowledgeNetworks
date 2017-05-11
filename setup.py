@@ -52,5 +52,4 @@ setup(name=NAME,
       packages=find_packages(),
       install_requires=REQUIRES,
       requires=REQUIRES,
-      include_package_data=TRUE
 )
