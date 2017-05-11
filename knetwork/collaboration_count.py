@@ -3,6 +3,7 @@ import numpy as np
 import os
 import os.path as op
 import inspect
+import csv
 
 
 def colla_count(data, country_list, column_name):
@@ -54,10 +55,10 @@ def wrapping_function(data_source, year, country_list, column_name):
         filepath = op.join(path, i)
         try:
             data = pd.read_csv(filepath, sep='\t', engine='python', usecols=['C1'], keep_default_na=False, index_col=False)
-            result = colla_count(data, country_list, column_name)
-            count += result
         except:
-            pass
+            data = pd.read_csv(filepath, sep='\t', engine='python', usecols=['C1'], keep_default_na=False, index_col=False,quoting=csv.QUOTE_NONE)
+        result = colla_count(data, country_list, column_name)
+        count += result
     return count
 
 
