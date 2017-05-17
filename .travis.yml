@@ -23,7 +23,7 @@ install:
   - python setup.py install
 
 script:
-  - nosetests --with-doctest --with-coverage --cover-package=ceo --exclude-dir=test/external --exclude-dir=extern --where=ceo
+  - nosetests --with-doctest --with-coverage --cover-package=knetwork --exclude-dir=test/external --exclude-dir=extern --where=knetwork
 
 after_success:
     - coveralls
