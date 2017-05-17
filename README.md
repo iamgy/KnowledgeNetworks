@@ -4,6 +4,8 @@
 
 [![Build Status](https://travis-ci.org/ksakloth/KnowledgeNetworks.svg?branch=master)](https://travis-ci.org/ksakloth/KnowledgeNetworks)
 
+[![Coverage Status](https://coveralls.io/repos/github/ksakloth/KnowledgeNetworks/badge.svg?branch=master (https://coveralls.io/github/ksakloth/KnowledgeNetworks?branch=master)
+
 ### Project Description
 Knowledge Networks
 ---
