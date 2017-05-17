@@ -2,6 +2,8 @@
   <img src="doc/logo/logo.png"><br>
 </div>
 
+[![Build Status](https://travis-ci.org/ksakloth/KnowledgeNetworks.svg?branch=master)](https://travis-ci.org/ksakloth/KnowledgeNetworks)
+
 ### Project Description
 Knowledge Networks
 ---
