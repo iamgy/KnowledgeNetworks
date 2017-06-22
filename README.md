@@ -1,21 +1,20 @@
 [![Build Status](https://travis-ci.org/ksakloth/KnowledgeNetworks.svg?branch=master)](https://travis-ci.org/ksakloth/KnowledgeNetworks)
 [![Coverage Status](https://coveralls.io/repos/github/ksakloth/KnowledgeNetworks/badge.svg?branch=master)](https://coveralls.io/github/ksakloth/KnowledgeNetworks?branch=master)
 
-<<<<<<< HEAD
+
 ### Project Description
-Knowledge Networks are used to signify **relationships** between organizations, people or resources. They are able to capture, transfer and create knowledge for the purpose of creating value.
+#### Knowledge Networks are used to signify **relationships** between organizations, people or resources. They are able to capture, transfer and create knowledge for the purpose of creating value.
 In this project we have shown a knowledge network of countries that have collaborated over the past 16 years for **nuclear energy research**.
 ---
 ### Data Sources
-The metadata for the project has been downloaded from [Web of Science](https://login.webofknowledge.com/error/Error?Error=IPError&PathInfo=%2F&RouterURL=https%3A%2F%2Fwww.webofknowledge.com%2F&Domain=.webofknowledge.com&Src=IP&Alias=WOK5)
+#### The metadata for the project has been downloaded from [Web of Science](https://login.webofknowledge.com/error/Error?Error=IPError&PathInfo=%2F&RouterURL=https%3A%2F%2Fwww.webofknowledge.com%2F&Domain=.webofknowledge.com&Src=IP&Alias=WOK5)
 ---
 
 ### Software Dependencies
  * Selenium
  * Pandas
  * Numpy
-=======
-Knowledge Networks
+
 ---
 
 ### Data Source
@@ -32,8 +31,6 @@ Knowledge Networks
 - Total number of csv files: ~550  
 - Total number of records: ~27000
 
->>>>>>> c3b7c76497cc533321e523a6eb0334e5c98bc16b
----
 
 ### Visualization
 
